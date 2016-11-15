@@ -1,3 +1,4 @@
+console.log("cash register works");
 
 function cashReg(){
   var _balance = 0; //amount in memory 
@@ -25,6 +26,7 @@ function cashReg(){
   deposit: deposit,
  };
 }
+
 var register = cashReg();
 
 var calculations = calculatorModule();
@@ -32,22 +34,18 @@ var calculations = calculatorModule();
 var intNum = 0;
 
 // ADDITION 
-var addNumbers = document.getElementById('addition');
-  addNumbers.addEventListener("click", function(){
-    calculations.load
+var addNumbers = document.getElementById("addition"); // variable referencing the + sign in the index
+  addNumbers.addEventListener("click", function(){    // adding click event listener to the + sign in index
+      calculations.load // function needs to reference the display.innerHTML and pass in the display number(s)  --    
+                        // the plus + doesnt immediately add when clicked, but only after the 2nd display number is typed
+                        // the = sign is also doing the adding -- might need to use switch?                 
 
-  };
+  });
 
 //subtracts
 //multiplies
 //divide
 //EQUALS
-
-// DISPLAY 
-
-var display = document.getElementById("display");
-
-
 
 // DECLARING CALCULATOR VARIABLES
 var one = document.getElementById("one");
@@ -64,12 +62,14 @@ var doubleZero = document.getElementById("doubleZero");
 var decimal = document.getElementById("decimal");
 var clearButton = document.getElementById("clearButton");
 
+// DISPLAY 
+var display = document.getElementById("display");
+var displayAsNum = parseFloat(display.innerHTML); // this isnt working, returns NaN
 
 // CALCULATOR EVENT LISTENERS
 one.addEventListener("click", function() {
   display.innerHTML = display.innerHTML.concat("1");
 });
-//it would be like taking the first thing you press (say 1), then concatenating the result of the 2nd you click (say 2), to 1, to get 12 and so on
 
 two.addEventListener("click", function() {
   display.innerHTML = display.innerHTML.concat("2");
@@ -116,8 +116,9 @@ decimal.addEventListener("click", function() {
 });
 
 clearButton.addEventListener("click", function() {
-  display.innerHTML = " ";
+  display.innerHTML = "";
 });
+
 
 // function myFunction(button) {
 //   var x = button.value;
