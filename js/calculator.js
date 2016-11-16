@@ -120,8 +120,8 @@ var dividePress = document.getElementById("division");
   });
 
 
-//OPERATIONS USING SWITCH
-var equals = document.getElementById("equals");
+  //OPERATIONS USING SWITCH
+  var equals = document.getElementById("equals");
   equals.addEventListener("click", function() {
      switch(operator) {
         case "add":
@@ -137,6 +137,22 @@ var equals = document.getElementById("equals");
             display.innerHTML = parseFloat(alpha) / parseFloat(display.innerHTML); 
       }
   });
+
+// IF ELSE VARIATION WHEN SWITCH GOT WONKY
+// var equals = document.getElementById("equals");
+//   equals.addEventListener("click", function() {
+//      if(operator === "add") {
+//         display.innerHTML = parseFloat(alpha) + parseFloat(display.innerHTML);
+//       } else if(operator === "subtract") {
+//         display.innerHTML = parseFloat(alpha) - parseFloat(display.innerHTML);
+//       } else if(operator === "multiply") {
+//         display.innerHTML = parseFloat(alpha) * parseFloat(display.innerHTML);
+//       } else if(operator === "divide") {
+//         display.innerHTML = parseFloat(alpha) / parseFloat(display.innerHTML);
+//       }
+//   });
+
+
 
       // if(operator === "add") {
       //   display.innerHTML = parseFloat(alpha) + parseFloat(display.innerHTML);
