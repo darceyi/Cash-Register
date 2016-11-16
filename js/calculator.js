@@ -85,40 +85,76 @@ clearButton.addEventListener("click", function() {
   display.innerHTML = "";
 });
 
-// OPERATIONS
+// OPERATIONS initialized
 
 var alpha = 0; 
+var operator = "";
 
-// ADDITION 
 
 var addPress = document.getElementById("addition"); 
   addPress.addEventListener("click", function(){   
       alpha = display.innerHTML;
-      display.innerHTML = "";          
-  });
-var addEquals = document.getElementById("equals");
-  addEquals.addEventListener("click", function(){
-    display.innerHTML = parseFloat(alpha) + parseFloat(display.innerHTML);    
+      display.innerHTML = "";      
+      operator = "add";    
   });
 
-// SUBTRACTION -- this code works but cant run two addEventListeners (for add and subtract) referencing the same element...working on switch now
+var subtractPress = document.getElementById("subtraction"); 
+  subtractPress.addEventListener("click", function(){   
+      alpha = display.innerHTML;
+      display.innerHTML = "";
+      operator = "subtract";   
+  });
 
-// var subtractPress = document.getElementById("subtraction"); 
-//   subtractPress.addEventListener("click", function(){   
-//       alpha = display.innerHTML;
-//       display.innerHTML = "";          
-//   });
-// var subtractEquals = document.getElementById("equals");
-//   subtractEquals.addEventListener("click", function(){
-//     display.innerHTML = parseFloat(alpha) - parseFloat(display.innerHTML);    
-//   });
+var multiplyPress = document.getElementById("multiply"); 
+  multiplyPress.addEventListener("click", function(){   
+      alpha = display.innerHTML;
+      display.innerHTML = ""; 
+      operator = "multiply";         
+  });
 
-//subtracts
-//multiplies
-//divide
-//EQUALS
+var dividePress = document.getElementById("division"); 
+  dividePress.addEventListener("click", function(){   
+      alpha = display.innerHTML;
+      display.innerHTML = "";  
+      operator = "divide";   
+  });
 
 
+//OPERATIONS USING SWITCH
+var equals = document.getElementById("equals");
+  equals.addEventListener("click", function() {
+     switch(operator) {
+        case "add":
+            display.innerHTML = parseFloat(alpha) + parseFloat(display.innerHTML);
+            break;
+        case "subtract":
+            display.innerHTML = parseFloat(alpha) - parseFloat(display.innerHTML);
+            break;
+        case "multiply":
+            display.innerHTML = parseFloat(alpha) * parseFloat(display.innerHTML);
+            break;
+        case "divide":
+            display.innerHTML = parseFloat(alpha) / parseFloat(display.innerHTML); 
+      }
+  });
+
+      // if(operator === "add") {
+      //   display.innerHTML = parseFloat(alpha) + parseFloat(display.innerHTML);
+      // } else if(operator === "subtract") {
+      //   display.innerHTML = parseFloat(alpha) - parseFloat(display.innerHTML);
+      // } else if(operator === "multiply") {
+      //   display.innerHTML = parseFloat(alpha) * parseFloat(display.innerHTML);
+      // } else if(operator === "divide") {
+      //   display.innerHTML = parseFloat(alpha) / parseFloat(display.innerHTML);
+      // }
+  // });
+
+
+
+
+// BRAIN FARTED ON SWITCH
+
+ 
 
 
 // BELOW IS THE ORIGINAL CALCULATOR SCRIPT
