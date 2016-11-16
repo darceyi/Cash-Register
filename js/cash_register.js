@@ -30,3 +30,10 @@ function cashReg(){
 // var register = cashReg();
 
 // var calculations = calculatorModule();
+
+
+// ( display ) is the primary ui that prints all results
+// [clear] will clear the display
+// [get balance] will display the current balance
+// [deposit cash] will add the amount currently in the ( display ) to the cash register, then clears the display
+// [withdraw cash] will remove the amount currently in the ( display ) to the cash register, then clears the display

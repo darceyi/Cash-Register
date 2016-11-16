@@ -150,13 +150,6 @@ var equals = document.getElementById("equals");
   // });
 
 
-
-
-// BRAIN FARTED ON SWITCH
-
- 
-
-
 // BELOW IS THE ORIGINAL CALCULATOR SCRIPT
 
 // function calculatorModule(){
