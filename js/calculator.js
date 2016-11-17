@@ -153,19 +153,6 @@ var dividePress = document.getElementById("division");
 //   });
 
 
-
-      // if(operator === "add") {
-      //   display.innerHTML = parseFloat(alpha) + parseFloat(display.innerHTML);
-      // } else if(operator === "subtract") {
-      //   display.innerHTML = parseFloat(alpha) - parseFloat(display.innerHTML);
-      // } else if(operator === "multiply") {
-      //   display.innerHTML = parseFloat(alpha) * parseFloat(display.innerHTML);
-      // } else if(operator === "divide") {
-      //   display.innerHTML = parseFloat(alpha) / parseFloat(display.innerHTML);
-      // }
-  // });
-
-
 // BELOW IS THE ORIGINAL CALCULATOR SCRIPT
 
 // function calculatorModule(){
